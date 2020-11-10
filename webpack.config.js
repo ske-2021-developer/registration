@@ -9,7 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
@@ -97,6 +97,7 @@ module.exports = {
 				{
 					from: path.resolve(__dirname, 'public'),
 					context: path.resolve(__dirname, 'public'),
+					noErrorOnMissing: true,
 					globOptions: {
 						dot: true,
 						ignore: ['**/*.html']
@@ -104,7 +105,7 @@ module.exports = {
 				}
 			]
 		}),
-		...(isDevelopment ? [] : [new BundleAnalyzerPlugin({ openAnalyzer: false })]),
+		// ...(isDevelopment ? [] : [new BundleAnalyzerPlugin({ openAnalyzer: false })]),
 		new webpack.DefinePlugin({
 			NODE_ENV: JSON.stringify(process.env.NODE_ENV),
 			'process.env.PUBLIC_URL': JSON.stringify(path.join('./'))
