@@ -3,6 +3,7 @@ import Register from './Register'
 import Profile from './Profile'
 import Login from './Login'
 import Private from './Private'
+import Home from './Home'
 import Forgotpassword from './Forgotpassword.js'
 import {Container} from 'react-bootstrap';
 import {AuthProvider} from '../context/authcontext'
@@ -21,6 +22,7 @@ function App() {
                   <Route path="/register" component={Register}/>
                   <Route path="/login" component={Login}/>
                   <Route path="/forgot-password" component={Forgotpassword}/>
+                  <Route path="/" component={Home}/>
                 </Switch>
               </AuthProvider>
             </BrowserRouter>

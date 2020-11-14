@@ -47,7 +47,7 @@ export default function Forgotpassword() {
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">
-        Need an account? <Link to="./Profile">Register</Link>
+        Need an account? <Link to="./Register">Register</Link>
       </div>
     </>
   )
