@@ -8,7 +8,6 @@ export default function Home() {
             <Link to="./Login">
                 <Button className="w-100 mt-3">Login</Button>
             </Link>
-            <div></div>
             <Link to="./Register">
                 <Button className="w-100 mt-3">Register</Button>
             </Link>

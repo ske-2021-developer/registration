@@ -13,7 +13,7 @@ export default function Profile() {
         setError(" ")
         try {
             await logout()
-            history.push("/login")
+            history.push("/")
         }catch {
             setError("Failed to logout.")
         }
